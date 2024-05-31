@@ -1,0 +1,58 @@
+body {
+    margin: 20px;
+    /*
+    Challenge:
+    Find a web safe font you like, and add it 
+    to your card.
+    */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.avatar {
+    width: 150px;
+    border-radius: 50%; /* Optional: makes the avatar circular */
+}
+
+.card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background: #023047;
+    color: #FB8500;
+    border-bottom: 6px solid #FFB703;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+    background: #FFB703;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+    color: #023047; 
+}
+
+
+/* Making the <p> element pop on hover */
+.card:hover p {
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 16px;
+    background: #023047; /* Add a background color */
+    padding: 5px;
+    border-radius: 5px; /* Add some rounding to the background */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add subtle text shadow */
+    transition: font-size 0.2s, background 0.2s, color 0.2s; /* Smooth transition for the changes */
+    animation: pop 0.5s ease-in-out;
+}
+@keyframes pop {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
